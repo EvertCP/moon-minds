@@ -1,0 +1,74 @@
+import React from "react";
+import styled from "styled-components"
+
+const Servicios = () => {
+    return (
+        <ServiciosWrapper >
+            <div className="container">
+                <div className="servicios-title">Nuestros Servicios</div>
+                <div className="servicios-desc">
+                    Levaremos tu marca por un ciclo donde analizaremos,
+                    crearemos y potenciares tu producto para
+                    generar un mayor flujo de personas e incrementar
+                    tus números.
+                </div>
+                <ul className="servicios-list">
+                    <button className="btn-servicios">Branding</button>
+                    <button className="btn-servicios">Web design</button>
+                    <button className="btn-servicios">SEO y SEM</button>
+                    <button className="btn-servicios">Inbound MKT</button>
+                    <button className="btn-servicios">Outbound MKT</button>
+                    <button className="btn-servicios">Asesoría de equipos</button>
+                    <button className="btn-servicios">Cuenats claves</button>
+                    <button className="btn-servicios">Fidelización</button>
+                    <button className="btn-servicios">Funnel de ventas</button>
+                </ul>
+            </div>
+
+        </ServiciosWrapper>
+    )
+};
+
+
+
+const ServiciosWrapper = styled.div `
+    .container {
+        color: var(--clr-white);
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .servicios-title {
+        font-size: 40px;
+    }
+
+    .servicios-desc{
+        font-size: 25px;
+        padding-top: 10px;
+    }
+
+    .servicios-list{
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(2, 60px);
+        gap: 20px;
+        justify-content: space-around;
+    }
+    .btn-servicios{
+        opacity: 80%;
+        background-color: #4B4B4B;
+        color: var(--clr-white);
+        padding: 5px;
+        border-radius: 1rem;
+        font-family: 'Michroma', 'sans-serif';
+        font-size: 20;
+        size: 2rem;
+        
+        &:hover{
+            background-color: #0C2D4A;
+            transition: .5s;
+        }
+    }
+`
+export default Servicios;
