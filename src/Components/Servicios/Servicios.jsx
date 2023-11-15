@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import { Tabs } from "../common/index";
 
 const Servicios = () => {
     return (
@@ -12,17 +13,12 @@ const Servicios = () => {
                     generar un mayor flujo de personas e incrementar
                     tus números.
                 </div>
-                <ul className="servicios-list">
-                    <button className="btn-servicios">Branding</button>
-                    <button className="btn-servicios">Web design</button>
-                    <button className="btn-servicios">SEO y SEM</button>
-                    <button className="btn-servicios">Inbound MKT</button>
-                    <button className="btn-servicios">Outbound MKT</button>
-                    <button className="btn-servicios">Asesoría de equipos</button>
-                    <button className="btn-servicios">Cuenats claves</button>
-                    <button className="btn-servicios">Fidelización</button>
-                    <button className="btn-servicios">Funnel de ventas</button>
-                </ul>
+
+                <section className="section sc-genres">
+                      <Tabs  />
+                </section>    
+
+                
             </div>
 
         </ServiciosWrapper>

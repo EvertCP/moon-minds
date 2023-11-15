@@ -9,8 +9,7 @@ const Redes = () => {
             <div className="container">
                 <div className="direccion">
                     <p className="direccion-moon">Moon Minds</p>
-                    <p className="direccion-desc">Volcan de chacahua 429,
-                        San Buenaventura, Ixtapaluca,
+                    <p className="direccion-desc">Ixtapaluca,
                         cp. 56536, México</p>
                 </div>
                 <div className="newsletter">
@@ -21,16 +20,16 @@ const Redes = () => {
                     <p className="redes-title">Siguenos</p>
                     <ul className="redes-list">
                         <li>
-                            <a href=""><BsLinkedin /></a>
+                            <a className="redes-icon" href="https://www.linkedin.com/company/101187081/admin/feed/posts/?feedType=following"><BsLinkedin /></a>
                         </li>
                         <li>
-                            <a href=""><BsFacebook /></a>
+                            <a className="redes-icon" href="https://www.facebook.com/profile.php?id=61552779937740"><BsFacebook /></a>
                         </li>
                         <li>
-                            <a href=""><BsInstagram /></a>
+                            <a className="redes-icon" href=""><BsInstagram /></a>
                         </li>
                         <li>
-                            <a href=""><RiTwitterXFill /></a>
+                            <a className="redes-icon" href=""><RiTwitterXFill /></a>
                         </li>
                     </ul>
                 </div>
@@ -44,10 +43,12 @@ export default Redes;
 const RedesWrapper = styled.div `
     .container{
         position: absolute;
+        margin: 15px 15px 15px 50px;
+        margin-top: 250px;
         color: var(--clr-white);
         padding: 10px;
-        align-items: center;
         text-align: center;
+        width: 40%;
     }
     .direccion-moon{
         font-size: 20px;
@@ -69,5 +70,11 @@ const RedesWrapper = styled.div `
     .redes-list{
         display: flex;
         justify-content: space-evenly;
+    }
+
+    .redes-icon{
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 30px;
     }
 `

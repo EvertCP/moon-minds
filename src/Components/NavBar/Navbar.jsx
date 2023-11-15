@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import "../../assets/4moon-minds.png"
+import { moon_logo_blanco } from "../../utils/images";
 
 
 const Navbar = () => {
     return(
         <NavbarWrapper className="d-flex align-items-center">
             <div className="container ">
-                <img src="../../assets/4moon-minds.png" alt="" />
+              <img className="logo" src={moon_logo_blanco} alt="" />
                 <ul className="navbar-nav ">
                     <li className="navbar-list">
                         <a className="boton-inicio" href="/" onClick="route()">Inicio</a>
@@ -25,23 +25,41 @@ const Navbar = () => {
 };
 
 const NavbarWrapper = styled.div`
-    min-height: 78px;
+    max-height: 15px;
     
-    
-
-    .navbar-nav{
-        background-color: #D9D9D9 transparent 50%;
-        border-radius: 1rem;
-        height: 20px;
-        width: 500px;
+    .container{
         display: flex;
         align-items: center;
-        padding-right: 50px;
+        justify-content: center;
+        height: 100px;
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: 50px;
+        color: var(--clr-white);
+    }
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100px;
+    }
+    .navbar-nav{
+        border-radius: 1rem;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 50px;
+        padding-bottom: 0px;
+        margin: 10px;
+        list-style: none;
         color: var(--clr-white);
     }
 
     .navbar-list{
-        display: flex;
+        list-style: none;
         padding-left: 50px
     }
 

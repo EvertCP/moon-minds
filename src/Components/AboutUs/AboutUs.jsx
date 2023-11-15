@@ -1,7 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { MdClose } from "react-icons/md";
+
+import { useState } from 'react';
 
 const AboutUs = () => {
+    const [showCard, setShowCard] = useState(false);
+    const [cardText, setCardText] = useState('');
+
+    const handleButtonClick = (text) => {
+        setShowCard(true);
+        setCardText(text);
+    };
+
+    const handleCardClose = () => {
+        setShowCard(false);
+        setCardText('');
+    };
+
     return (
         <AboutWrapper>
             <div className="container">
@@ -13,10 +29,29 @@ const AboutUs = () => {
                     interacciones y decisiones.
                 </div>
                 <ul className="aboutus-list">
-                    <button className="btn-about">Mision</button>
-                    <button className="btn-about">Vision</button>
-                    <button className="btn-about">Valores</button>
+                    <button className="btn-about" onClick={() => handleButtonClick('Misión')}>Misión</button>
+                    <button className="btn-about" onClick={() => handleButtonClick('Visión')}>Visión</button>
+                    <button className="btn-about" onClick={() => handleButtonClick('Valores')}>Valores</button>
                 </ul>
+                {showCard && (
+                    <div className="card">
+                        <div className="card-header">
+                            <h3>{cardText}</h3>
+                            <button onClick={handleCardClose}><MdClose size={26}/></button>
+                        </div>
+                        <div className="card-body">
+                            {cardText === 'Misión' && (
+                                <p>Texto de la Misión</p>
+                            )}
+                            {cardText === 'Visión' && (
+                                <p>Texto de la Visión</p>
+                            )}
+                            {cardText === 'Valores' && (
+                                <p>Texto de los Valores</p>
+                            )}
+                        </div>
+                    </div>
+                )}
             </div>
         </AboutWrapper>
     )
