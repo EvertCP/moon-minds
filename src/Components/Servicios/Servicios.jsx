@@ -9,7 +9,7 @@ const Servicios = () => {
                 <div className="servicios-title">Nuestros Servicios</div>
                 <div className="servicios-desc">
                     Levaremos tu marca por un ciclo donde analizaremos,
-                    crearemos y potenciares tu producto para
+                    crearemos y potenciaremos tu producto para
                     generar un mayor flujo de personas e incrementar
                     tus números.
                 </div>

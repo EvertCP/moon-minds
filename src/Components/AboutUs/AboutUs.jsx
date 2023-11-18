@@ -28,7 +28,7 @@ const AboutUs = () => {
                     y ética en todas nuestras
                     interacciones y decisiones.
                 </div>
-                <ul className="aboutus-list">
+                <ul className="aboutUs-list">
                     <button className="btn-about" onClick={() => handleButtonClick('Misión')}>Misión</button>
                     <button className="btn-about" onClick={() => handleButtonClick('Visión')}>Visión</button>
                     <button className="btn-about" onClick={() => handleButtonClick('Valores')}>Valores</button>
@@ -36,18 +36,28 @@ const AboutUs = () => {
                 {showCard && (
                     <div className="card">
                         <div className="card-header">
+                            <button className="btn-close" onClick={handleCardClose}><MdClose size={26}/></button>
                             <h3>{cardText}</h3>
-                            <button onClick={handleCardClose}><MdClose size={26}/></button>
                         </div>
                         <div className="card-body">
                             {cardText === 'Misión' && (
-                                <p>Texto de la Misión</p>
+                                <p>Acrecentar la construcción, elevación y consolidación de las marcas de nuestros socios.</p>
                             )}
                             {cardText === 'Visión' && (
-                                <p>Texto de la Visión</p>
+                                <p>Convertirnos en aliados estratégicos para nuestros clientes, proporcionando consultoría de negocios integral y soluciones poderosas desde la fase inicial hasta la consolidación, garantizando su éxito y crecimiento sostenible en el mercado.</p>
                             )}
                             {cardText === 'Valores' && (
-                                <p>Texto de los Valores</p>
+                                <p> Compromiso con la Excelencía. <br/>
+                                    Creatividad e Innovación. <br/>
+                                    Integridad. <br/>
+                                    Colaboración.<br/>
+                                    Transparencia y Comunicación Abierta. <br/>
+                                    Aprendizaje Continuo. <br/>
+                                    Adaptabilidad.<br/>
+                                    Pasión por el Éxito del Cliente. <br/>
+                                    Respeto a la Diversidad. <br/>
+                                    Responsabilidad Social. <br/>
+                                </p>
                             )}
                         </div>
                     </div>
@@ -76,7 +86,7 @@ const AboutWrapper = styled.div `
         padding-top: 10px;
     }
 
-    .aboutus-list {
+    .aboutUs-list {
         display: grid;
         grid-template-columns: repeat(3, 200px);
         grid-template-rows: repeat(2, 60px);
@@ -96,6 +106,25 @@ const AboutWrapper = styled.div `
         
         &:hover{
             background-color: #0C2D4A;
+            transition: .5s;
+        }
+    }
+    .btn-close {
+        position: absolute;
+        display: flex;
+    }
+    .card {
+        opacity: 80%;
+        background-color: #4B4B4B;
+        color: var(--clr-white);
+        padding: 5px;
+        border-radius: 1rem;
+        font-family: 'Michroma', 'sans-serif';
+        font-size: 20;
+        size: 2rem;
+
+        &:hover {
+            background-color: #0c3a63;
             transition: .5s;
         }
     }

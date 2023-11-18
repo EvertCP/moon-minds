@@ -14,10 +14,10 @@ const Redes = () => {
                 </div>
                 <div className="newsletter">
                     <p className="newsletter-title">Newsletter</p>
-                    <form className="newsletter-form">Correo electronico</form>
+                    <form className="newsletter-form">Correo electrónico</form>
                 </div>
                 <div className="redes">
-                    <p className="redes-title">Siguenos</p>
+                    <p className="redes-title">Síguenos</p>
                     <ul className="redes-list">
                         <li>
                             <a className="redes-icon" href="https://www.linkedin.com/company/101187081/admin/feed/posts/?feedType=following"><BsLinkedin /></a>
@@ -44,7 +44,6 @@ const RedesWrapper = styled.div `
     .container{
         position: absolute;
         margin: 15px 15px 15px 50px;
-        margin-top: 250px;
         color: var(--clr-white);
         padding: 10px;
         text-align: center;
